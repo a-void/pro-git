@@ -1,4 +1,6 @@
-`git rebase -i HEAD~3`
+### Rewriting commit history
+
+`git rebase -i HEAD~3`  
 `git rebase -i <commit>`
 
 ##### Commands:
