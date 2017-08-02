@@ -17,7 +17,7 @@ Need to pull latest `dev` updates onto local `feature_1` branch.
 
 ```
 git checkout feature_1  // make sure youre in the local `feature_1` branch
-git fetch origin/dev    // fetch the updates from the remote `dev` branch
+git fetch               // fetch the updates
 
 --- SOLUTION 1 ---
 git merge ogirin/dev    // takes new commits from `dev` and adds them on top of `feature_1`
