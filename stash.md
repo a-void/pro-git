@@ -1,23 +1,20 @@
 ### Stashing uncommitted changes
 
-**To stash:**  
-`git stash`  
-`git stash save`  
+------ To stash uncommitted changes ------
+`git stash save -u 'Message'`
+    (-u = stash items including untracked files)
 
-**To list stashed items:**  
+------ To list stashed items: ------
 `git stash list`
 
-**To apply stashed items:**  
-`git stash apply`  
-`git stash apply stash@{1}`  
+------ To show what changes has been stashed: ------
+`git stash show stash@{0}`
 
-**Only stash unstaged items:**  
-`git stash --keep-index`  
-`git stash save --keep-index`  
+------ To apply stashed items: ------
+`git stash apply stash@{1}`
 
-**Stash all items including untracked files:**  
-`git stash -u`  
-`git stash --include-untracked`  
+------ Only stash unstaged items: ------
+`git stash save --keep-index`
 
-**Interactive stashing (choose what to stash):**  
-`git stash --patch`  
+------ Interactive stashing (choose what to stash): ------
+`git stash --patch`
