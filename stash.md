@@ -18,3 +18,12 @@
 
 ------ Interactive stashing (choose what to stash): ------
 `git stash --patch`
+
+------ Remove the latest stash: ------
+`git stash drop`
+
+------ Remove a specific stash: ------
+`git stash drop stash@{0}`
+
+------ Remove a single stash and apply it on top of current working tree: ------
+`git stash pop`
