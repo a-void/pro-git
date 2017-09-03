@@ -52,3 +52,17 @@ git push origin dev                               // pushes local commits onto r
 
 ```
 
+----------------------------------------------------------------------------------------------
+##### Merge changes made on local branch into specific remote branch (dev):
+
+```
+git checkout -b fund_data origin/dev              // created 'fund_data' branch based on remote 'dev'
+  ... do some work on fund_data branch
+  ... commit all changes on fund_data
+git checkout dev                                  // switch into local 'dev' branch based on remote 'dev'
+git fetch                                         // fetch latest changes from remote 'dev'
+git merge origin/dev                              // merge latest changes from remote 'dev' into local 'dev'
+git merge fund_data                               // merges content in 'fund_data' into local 'dev'
+git push origin dev                               // pushes local 'dev' into remote 'dev'
+
+```
