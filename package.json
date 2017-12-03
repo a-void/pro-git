@@ -1,0 +1,16 @@
+{
+  "name": "pro-git",
+  "version": "0.0.0",
+  "description": "Advanced git practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-void/pro-git.git"
+  },
+  "author": "a-void",
+  "license": "MIT",
+  "homepage": "https://github.com/a-void/pro-git#readme"
+}
