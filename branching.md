@@ -4,16 +4,18 @@
 
 ```
 git checkout -b new_branch origin/old_branch      // creates a local 'new_branch' based on remote 'old_branch'
+--- OR ---
+git checkout old_branch                           // creates a local 'old_branch' based on remote 'old_branch'
 git push -u origin new_branch                     // pushes the newly created local 'new_branch' to remote origin and sets up to track it
 
 ```
 ----------------------------------------------------------------------------------------------
 ##### Merging remote branch into local:
 
-Currently working on local branch 'feature_1' that was branched off from remote 'dev' branch.
-Made some commits to local branch 'feature_1'.
+Currently working on local branch 'feature-1' that was branched off from remote 'dev' branch.
+Made some commits to local branch 'feature-1'.
 Now 'dev' branch has been updated.
-Need to pull latest 'dev' updates onto local 'feature_1' branch.
+Need to pull latest 'dev' updates onto local 'feature-1' branch.
 
 ```
 git checkout feature_1  // make sure youre in the local 'feature_1' branch
@@ -39,7 +41,7 @@ If you 'git pull --rebase' instead, git will fast forward your master to upstrea
 ```
 git checkout -b new_branch origin/old_branch      // creates a local 'new_branch' based on remote 'old_branch'
 git push -u origin new_branch                     // pushes the local 'new_branch' to remote (-u sets up tracking)
-git push --delete origin old_branch               // deletes 'old_branch' from remote origin
+git push -d origin old_branch                     // deletes 'old_branch' from remote origin
 
 ```
 ----------------------------------------------------------------------------------------------
@@ -57,8 +59,8 @@ git push origin dev                               // pushes local commits onto r
 
 ```
 git checkout -b fund_data origin/dev              // created 'fund_data' branch based on remote 'dev'
-  ... do some work on fund_data branch
-  ... commit all changes on fund_data
+  --> do some work on fund_data branch
+  --> commit all changes on fund_data
 git checkout dev                                  // switch into local 'dev' branch based on remote 'dev'
 git fetch                                         // fetch latest changes from remote 'dev'
 git merge origin/dev                              // merge latest changes from remote 'dev' into local 'dev'
@@ -66,3 +68,14 @@ git merge fund_data                               // merges content in 'fund_dat
 git push origin dev                               // pushes local 'dev' into remote 'dev'
 
 ```
+----------------------------------------------------------------------------------------------
+##### Delete branches
+
+```
+git push -d origin old_branch                     // deletes 'old_branch' from remote origin (checks whethers 100% merged)
+git push -D origin old_branch                     // force delete 'old_branch' from origin (deletes even if not merged)
+
+git branch -d old_branch                          // deletes 'old_branch' locally
+
+```
+----------------------------------------------------------------------------------------------
