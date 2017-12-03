@@ -12,5 +12,8 @@
   },
   "author": "a-void",
   "license": "MIT",
-  "homepage": "https://github.com/a-void/pro-git#readme"
+  "homepage": "https://github.com/a-void/pro-git#readme",
+  "dependencies": {
+    "react": "^16.2.0"
+  }
 }
