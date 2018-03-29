@@ -73,9 +73,17 @@ git push origin dev                               // pushes local 'dev' into rem
 
 ```
 git push -d origin old_branch                     // deletes 'old_branch' from remote origin (checks whethers 100% merged)
-git push -D origin old_branch                     // force delete 'old_branch' from origin (deletes even if not merged)
 
 git branch -d old_branch                          // deletes 'old_branch' locally
+git branch -D old_branch                          // force deletes 'old_branch' locally (even if unmerged)
 
 ```
 ----------------------------------------------------------------------------------------------
+##### Prune old/deleted remote branches
+
+```
+git remote prune origin
+
+```
+----------------------------------------------------------------------------------------------
+
